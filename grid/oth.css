@@ -1,36 +1,45 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
-*{
+
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: Lato;
     font-size: 2rem;
     color: white;
-    text-align: center;
+    text-align:center;
 }
+
 /*
 odd 表示单数 even  表示双数
 */
-div:nth-child(odd){
+div:nth-child(odd) {
     background-color: #21BBD4;
 }
-div:nth-child(even){
+
+div:nth-child(even) {
     background-color: #2A737F;
 }
+
 /*
 display: 为声明语句
 */
-.grid{
+.grid {
     display: grid;
     /*
     设置列的宽度，设置了三列，显示三列
     */
     grid-template-columns: 200px 200px 200px;
-/*
+    /*
  设置行高。行数不是根据设置的个数来的
-*/
-    grid-template-rows: 150px 200px;
-    grid-auto-rows: 50px;
+ */
+    grid-template-rows: repeat(2,150px);
+    grid-auto-rows: 30px;
+    /*
+    设置列间距，行间距
+    */
+    grid-column-gap: 2rem;
     row-gap: 2rem;
     column-gap: 1rem;
 }
