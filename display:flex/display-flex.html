@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Lato', san-serif;
+            padding: 2rem;
+        }
+
+        .one {
+            background-color: orange;
+        }
+
+        .two {
+            background-color: DarkSeaGreen;
+        }
+
+        .flex {
+            display: flex;
+            outline: 2px dashed grey;
+            /*   flex-direction: row;
+  flex-direction: column; */
+            /*   flex-wrap: wrap; */
+        }
+
+        /* 
+flex-basis
+flex-grow
+flex-shrink 
+*/
+
+        .one {
+            flex-shrink: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="flex">
+        <div class="one">嗨，I'm div one.</div>
+        <div class="two">嗨，I'm div two, with more words.</div>
+    </section>
+
+    <script>
+        // 选中第一个div
+        let firstDiv = document.querySelector('.one');
+
+        // 获取第一个div的所有样式属性
+        let computedStyles = window.getComputedStyle(firstDiv);
+
+        // 获取所有样式属性中的flex-basis属性值
+        let flexBasis = computedStyles.getPropertyValue('flex-basis');
+        // 获取所有样式属性中的flex-grow属性值
+        let flexGrow = computedStyles.getPropertyValue('flex-grow');
+        // 获取所有样式属性中的flex-shrink属性值
+        let flexShrink = computedStyles.getPropertyValue('flex-shrink');
+
+        // 将flex-basis, flex-grow, flex-shrink分别打印到控制台
+        console.log(`flex-basis is ${flexBasis}`);
+        console.log(`flex-grow is ${flexGrow}`);
+        console.log(`flex-shrink is ${flexShrink}`);
+    </script>
+</body>
+
+</html>
