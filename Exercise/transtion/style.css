@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500@display=swap");
+
+.image-container {
+    position: relative; /* 使容器相对定位 */
+ /*overflow: hidden; 隐藏超出容器内容 */
+    object-fit: cover;
+    background-color: cadetblue;
+    max-width: 100%;
+    display: flex;
+    width: fit-content;
+  }
+  
+  .image-container img {
+    position: absolute; /* 使图像在容器内绝对定位 */
+    top: 0; /* 将图像定位在容器顶部 */
+    right: 0; /* 将图像定位在容器左侧 */
+    width: 100%; /* 初始宽度为0 */
+    height: 100%; /* 初始高度为0 */
+    opacity: 100%; /* 初始透明度为0（隐藏） */
+  }
+  
+  .image-container  img:nth-child(1) {
+    animation-name: image-animation; /* 对第一张图片应用动画 */
+    animation-duration: 5s; /* 设置动画持续时间为5秒 */
+    animation-delay: 0s; /* 立即开始动画 */
+  }
+  
+  .image-container  img:nth-child(2) {
+    animation-name: image-animation; /* 对第二张图片应用动画 */
+    animation-duration: 5s; /* 设置动画持续时间为5秒 */
+    animation-delay: 1s; /* 延迟1秒开始动画 */
+  }
+  
+  .image-container  img:nth-child(3) {
+    animation-name: image-animation; /* 对第三张图片应用动画 */
+    animation-duration: 5s; /* 设置动画持续时间为5秒 */
+    animation-delay: 2s; /* 延迟2秒开始动画 */
+  }
+  .image-container  img:nth-child(4) {
+    animation-name: image-animation; /* 对第三张图片应用动画 */
+    animation-duration: 5s; /* 设置动画持续时间为5秒 */
+    animation-delay: 3s; /* 延迟2秒开始动画 */
+  }
+  .image-container  img:nth-child(5) {
+    animation-name: image-animation; /* 对第三张图片应用动画 */
+    animation-duration: 5s; /* 设置动画持续时间为5秒 */
+    animation-delay: 4s; /* 延迟2秒开始动画 */
+  }
+  
+  @keyframes image-animation {
+    0% {
+      transform: scale(0) translateX(100%) rotateX(-10deg); /* 从右上角开始，缩放到0 */
+      opacity: 0; /* 隐藏图像 */
+    }
+    50% {
+      transform: scale(1); /* 放大到100% */
+      opacity: 1; /* 完全显示图像 */
+    }
+    100% {
+      transform: scale(0) translate(-50%, 50%); /* 缩放到右下角，缩放到0 */
+      opacity: 1; /* 隐藏图像 */
+    }
+    50% {
+        transform: scale(1); /* 放大到100% */
+        opacity: 1; /* 完全显示图像 */
+      }
+      0% {
+        transform: scale(0) translateY(0%); /* 从右上角开始，缩放到0 */
+        opacity: 0; /* 隐藏图像 */
+        bottom: 0;
+        right: 0;
+      }
+  }
+  

@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "server": "live-server ./ --port=8181 --host=localhost --proxy=/api:http://www.abc.com/api/",
+       
         "build": "vite build",
         "dev": "vite",
         "preview": "vite preview"

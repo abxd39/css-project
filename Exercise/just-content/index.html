@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS justify-content</title>
+    <style>
+        .flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  border: solid black 1px;
+}
+
+.flex-start { 
+  justify-content: flex-start; 
+}
+
+.flex-end { 
+  justify-content: flex-end; 
+}  
+.flex-end div {
+  background: gold;
+}
+
+.center { 
+  justify-content: center; 
+}  
+.center div {
+  background: deepskyblue;
+}
+
+.space-between { 
+  justify-content: space-between; 
+}  
+.space-between div {
+  background: lightgreen;
+}
+
+.space-around { 
+  justify-content: space-around; 
+}
+.space-around div {
+  background: hotpink; 
+}
+
+.space-evenly { 
+  justify-content: space-evenly; 
+}
+.space-evenly div {
+  background: #bada55; 
+}
+
+.flex-item {
+    --size:1;
+  background: tomato;
+  padding:  calc(5px*var(--size));
+  width:  calc(60px*var(--size));
+  height:  calc(50px*var(--size));
+  margin:calc(5px*var(--size));
+  line-height: calc(50px*var(--size));
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="flex-container flex-end">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+      </div>
+      
+      <div class="flex-container center">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+      </div>
+      
+      <div class="flex-container space-between">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+      </div>
+      
+      <div class="flex-container space-around">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+      </div>
+      
+      <div class="flex-container space-evenly">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+      </div>
+</body>
+</html>

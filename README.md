@@ -325,4 +325,11 @@ css 中的display是干嘛的？
 CSS Grid 
 [第二集： fr单位和repeat()函数](/css-project/grid网格布局/fr单位和repeat()函数/第二集fr单位和repeat()函数.md)
 
+
 [index.html中导入javascript模块](/css-project/<script%20type="module">模块导入.md)
+### 常见CSS 属性
+[object-fit]()
+[justify-content]()
+[clik-path]()
+[translate]()
+[transfrom](页面动态效果)

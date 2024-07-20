@@ -43,6 +43,21 @@ body {
   padding: 1em;
 }
 
+/*
+解释
+这段 CSS 代码定义了一个名为 .header 的类的样式。
+
+display: flex;: 将 .header 元素设置为 Flex 布局容器。这意味着其子元素将按照 Flex 布局模型进行排列。
+flex-wrap: wrap;: 允许 Flex 容器中的子元素自动换行，以适应不同屏幕尺寸。
+margin-top: -0.5rem;: 设置 .header 元素的上边距为 -0.5rem。
+justify-content: space-between;: 将 Flex 容器中的子元素在主轴方向（默认水平）上平均分布，并且在两端留出空白。
+总结
+这段 CSS 代码将 .header 元素设置为一个 Flex 布局容器，其子元素可以自动换行，并均匀分布在容器的两端，同时上边距为 -0.5rem。这通常用于创建响应式的头部导航栏或类似布局。
+
+简单来说：
+这段代码定义了一个头部区域，其中的元素会水平排列，如果空间不够，会自动换行，并且元素之间会有等间距。
+*/
+
 .header {
   display: flex;
   flex-wrap: wrap;
@@ -354,7 +369,22 @@ pre {
   border-left: 11px solid rgba(255, 255, 255, 0.7);
   ;
 }
-
+/*
+属性解释
+display: inline-block;: 将按钮设置为内联块元素，使其既有块级元素的特性（可设置宽高），又有内联元素的特性（不会换行）。
+padding: 0.4em 0.8em;: 设置按钮内边距，上下内边距为 0.4em，左右内边距为 0.8em。
+background-color: #D11606;: 设置按钮的背景颜色为 #D11606。
+background-color: #DA931E;: 这行代码重复定义了背景颜色，会被后面的值覆盖。
+border: none;: 去除按钮的边框。
+border-radius: 4px;: 设置按钮的边框为 4px 的圆角。
+font-family: 'PT Sans', sans-serif;: 设置按钮的字体为 'PT Sans'，如果没有该字体，则使用默认的 sans-serif 字体。
+font-size: 16px;: 设置按钮的字体大小为 16px。
+line-height: 24px;: 设置按钮的行高为 24px。
+color: #fff;: 设置按钮的文本颜色为白色。
+cursor: pointer;: 当鼠标悬停在按钮上时，光标变为指针形状。
+-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;: 禁止用户选择按钮上的文本（兼容不同浏览器）。
+-webkit-appearance: none; appearance: none;: 去除浏览器默认的按钮样式，以实现自定义样式。
+*/
 button {
   display: inline-block;
   padding: 0.4em 0.8em;
@@ -379,6 +409,17 @@ button:active {
   outline: none;
 }
 
+/*
+1、button: 这个选择器选中所有的 <button> 元素。
+2、:not(.disabled): 这个伪类选择器选中所有不是 .disabled 类的按钮。
+3、:hover: 这个伪类选择器选中鼠标悬停在按钮上的状态。
+4、background-color: #F12D22;: 当鼠标悬停在非禁用状态的按钮上时，设置按钮的背景颜色为 #F12D22。
+background-color: #C97B00;: 这行代码似乎是多余的，因为前一行已经定义了背景颜色。
+问题
+由于 background-color 属性被定义了两次，且值不同，后一个声明会覆盖前一个，因此最终按钮的背景颜色将是 #C97B00。
+
+这段 CSS 代码意图是当鼠标悬停在非禁用状态的按钮上时，改变按钮的背景颜色为 #F12D22。但是由于代码错误，最终效果是按钮的背景颜色为 #C97B00。
+*/
 button:not(.disabled):hover {
   background-color: #F12D22;
   background-color: #C97B00;
