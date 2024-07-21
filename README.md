@@ -328,8 +328,21 @@ CSS Grid
 
 [index.html中导入javascript模块](/css-project/<script%20type="module">模块导入.md)
 ### 常见CSS 属性
-[object-fit]()
-[justify-content]()
+[flex](弹性盒布局.md)
+[flex-grow]()
+[flex-shrink]()
+[flex-basis]()
+[align-items]()
+[align-content]()
+[order]()
+
+[object-fit:conver]()
+[justify-content 与 justify-items]()
 [clik-path]()
 [translate]()
 [transfrom](页面动态效果)
+[:befer 是设么意思？ :after]()
+[absolute 绝对定位](/css-project/absolute.md)
+[正常文档流](/css-project/正常文档流.md)
+[什么是伪元素？什么是伪类？二者的区别？使用场景？](/css-project/伪元素.md)
+[width: fit-content;](/css-project/fit-content.md)
